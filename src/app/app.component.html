@@ -1,3 +1,66 @@
-<h1>
-  {{title}}
-</h1>
+<body>
+<div id="playerOptions">
+    <span class="cash">Time: <span id="time">0</span></span></br>
+    <span class="cash">Cash: <span id="cash">0</span></span></br>
+    <span class="cash">Bet: <span id="currentBet">0</span></span>
+    </br>
+    <div *ng-if="show">
+    <button (click)="bet()">Bet</button>
+    <button (click)="hit()">Hit</button>
+    <button (click)="stand()">Stand</button>
+    </div>
+</div>
+
+<button *ng-if="showJoin" (click)="joinTable()">Join</button>
+<button *ng-if="showLeave" (click)="leaveTable()">Leave</button>
+
+<div style="margin-left:-100px;">
+    <div style="text-align: center">
+        <div style="display: inline-block;">
+            <div style="margin-left: 100px;border: 2px solid transparent;width: 100px;height: 20px;color:white;font-weight: bold;font-family: Arial;text-shadow: 1px 1px 1px black;">Dealer</div>
+        </div>
+    </div>
+    <div style="text-align: center">
+        <div style="display: inline-block;">
+            <div style="margin-left: 100px;border: 2px solid darkslategrey;width: 100px;height: 20px;font-family: Arial;font-weight: bold;"
+                 id="_score7"></div>
+        </div>
+    </div>
+    <center>
+        <div id="_player7"
+             style="margin-left: 100px;width:100px;height:145px;background-color:darkcyan;border:2px solid darkslategrey;"></div>
+    </center>
+<!-- These should be generated progamatically, but lazy-->
+    <div style="margin-top:200px;text-align: center">
+        <div style="display: inline-block;">
+            <div class="playerName" id="_name1"></div>
+            <div class="playerName" id="_name2"></div>
+            <div class="playerName" id="_name3"></div>
+            <div class="playerName" id="_name4"></div>
+            <div class="playerName" id="_name5"></div>
+            <div class="playerName" id="_name6"></div>
+        </div>
+    </div>
+    <div style="text-align: center">
+        <div style="display: inline-block;">
+            <div class="playerScore" id="_score1"></div>
+            <div class="playerScore" id="_score2"></div>
+            <div class="playerScore" id="_score3"></div>
+            <div class="playerScore" id="_score4"></div>
+            <div class="playerScore" id="_score5"></div>
+            <div class="playerScore" id="_score6"></div>
+        </div>
+    </div>
+    <div style="text-align: center">
+        <div id="cardHolder" style="display: inline-block;">
+            <div class="playerSlot" id="_player1"></div>
+            <div class="playerSlot" id="_player2"></div>
+            <div class="playerSlot" id="_player3"></div>
+            <div class="playerSlot" id="_player4"></div>
+            <div class="playerSlot" id="_player5"></div>
+            <div class="playerSlot" id="_player6"></div>
+        </div>
+    </div>
+</div>
+
+</body>
